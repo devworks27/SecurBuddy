@@ -205,8 +205,8 @@ async def root() -> dict[str, str]:
     """Explain where the browser UI and API documentation are located."""
     return {
         "service": "SecurBuddy",
-        "message": "SecurBuddy API is running. Open http://localhost:5173 for the web app.",
-        "docs": "http://127.0.0.1:8000/docs",
+        "message": "SecurBuddy API is running securely in the cloud.",
+        "status": "online",
     }
 
 

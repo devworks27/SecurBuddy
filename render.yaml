@@ -1,0 +1,7 @@
+﻿services:
+  - type: web
+    name: securbuddy-backend
+    env: python
+    rootDir: Backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: python -m uvicorn main:app --host 0.0.0.0 --port \

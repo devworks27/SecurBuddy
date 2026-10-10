@@ -1,4 +1,4 @@
-const API_BASE = 'https://securbuddy-backend.onrender.com/api/';
+const API_BASE = '//securbuddy-backend.onrender.com/api/';
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_BASE}${path}`, {

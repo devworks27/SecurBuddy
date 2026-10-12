@@ -171,13 +171,10 @@ app = FastAPI(
     "a plain-English explanation, and copy-paste remediation commands.",
     lifespan=lifespan,
 )
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://securbuddy-frontend.onrender.com/",
-        "http://localhost:5173",
-        "http://127.0.0.1:5173"
-    ],
+    allow_origin_regex="https://.*\\.onrender\\.com|http://localhost:.*|http://127\\.0\\.0\\.1:.*",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

@@ -172,14 +172,19 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+origins = [
+    "https://securbuddy-frontend.onrender.com/",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173"
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origin_regex="https://.*\\.onrender\\.com|http://localhost:.*|http://127\\.0\\.0\\.1:.*",
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 
 def get_reputation(request: Request) -> ReputationService:
